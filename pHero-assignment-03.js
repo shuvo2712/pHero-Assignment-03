@@ -1,17 +1,17 @@
 /** Problem -01 ( Divide the Asset ) */
 var area = 800;
 //write your code 
-console.log(`~~~~~~~~~~ Problem 01 ~~~~~~~~~~ `);
 
 var halfArea = area / 2;
 console.log(halfArea)
 
 
 
+
+
 /** Problem -02 ( Cycle or Laptop ) */
 var money = 10000;
 //write your code here
-console.log(`~~~~~~~~~~ Problem 02 ~~~~~~~~~~ `);
 
 if (money >= 25000) {
     console.log(`Laptop`)
@@ -25,39 +25,65 @@ else {
 
 
 
+
+
 /** Problem -03 ( Medicine Planner ) */
 var lastDay = 11 ;
 //write your code here
-console.log(`~~~~~~~~~~ Problem 03 ~~~~~~~~~~`);
 
 for (i = 1; i <= lastDay; i++) {
     if (i % 3 == 0) {
-        console.log(i, ` ~ medicine`)
+        console.log(i, ` - medicine`)
     }
     else {
-        console.log(i, ` ~ rest`)
+        console.log(i, ` - rest`)
     }
 }
 
 
 
+
+
 /** Problem 04 - (Delete / Store) */
-var fileName= "pdfData.jpg";
+var fileName = "pdfData.jpg";
 //write your code here
-console.log(`~~~~~~~~~~ Problem 04 ~~~~~~~~~~`);
+
+var storeDelete = `Delete`;
+var fileType = ``;
+
+// check for type
+for (obj of fileName) {
+    if (obj == `.`) {
+        fileType = ``;
+    }
+    else {
+        fileType += obj;
+    }
+}
+
+// check for store or delete
+if (fileName[0] == `#`) {
+  storeDelete = `Store`;
+}
+else if (fileType == `pdf` || fileType == `docx`) {
+    storeDelete = `Store`;
+}
+    
+console.log(storeDelete)
+
 
 
 
 
 /** Problem 05 - ( PH Email Generator )  */
-var student= { name: "jhanku" , roll: 1014 ,department: "cse" };
+var student= { name: "jhankar" , roll: 1014 ,department: "cse" };
 //write your code here
-console.log(`~~~~~~~~~~ Problem 05 ~~~~~~~~~~`);
 
-studentEmail =
+var studentEmail =
     student.name + student.roll + `.` + student.department + `@ph.ac.bd`;
 console.log(studentEmail)
-console.log(student)
+
+
 
 
 
@@ -65,9 +91,8 @@ console.log(student)
 var experience = 30;
 var startingSalary = 45000;
 //write your code here
-console.log(`~~~~~~~~~~ Problem 06 ~~~~~~~~~~`);
 
 for (i = 0; i < experience; i++) {
-    startingSalary = startingSalary + startingSalary * 0.05;
+    startingSalary += startingSalary * 0.05;
 }
 console.log(startingSalary.toFixed(2))
