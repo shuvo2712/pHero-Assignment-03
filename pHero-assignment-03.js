@@ -96,3 +96,4 @@ for (i = 0; i < experience; i++) {
     startingSalary += startingSalary * 0.05;
 }
 console.log(startingSalary.toFixed(2))
+console.log();
